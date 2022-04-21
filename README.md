@@ -1,4 +1,4 @@
-#about us
+# about us
 ## 第一步: 安裝需要的套件
 
 首先到 [這裡](https://github.com/Ololkao/BeiBei) 複製一份到本地端。  
@@ -28,4 +28,4 @@ yarn
 
 ## 第三步: 執行html
 
-完成之後，就可以到 `./dist/html/about.html` 打開本地網頁或直接點[這裡](https://kc71486.github.io/BeiBei_aboutus/about.html)
+完成之後，就可以到 `./dist/html/about.html` 打開本地網頁或直接點[這裡](https://kc71486.github.io/BeiBei_aboutus/about.html) 執行網頁
