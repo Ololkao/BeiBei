@@ -28,4 +28,4 @@ yarn
 
 ## 第三步: 執行html
 
-完成之後，就可以到 `./dist/html/about.html` 打開本地網頁或直接點[這裡](https://kc71486.github.io/BeiBei_aboutus/about.html) 執行網頁
+完成之後，就可以到 `./dist/html/about.html` 打開本地網頁或直接點[這裡](https://ololkao.github.io/BeiBei/dist/html/about.html) 執行網頁
