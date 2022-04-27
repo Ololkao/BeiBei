@@ -226,7 +226,7 @@ body {
 	justify-content: space-between;
 }
 
-#__footer__bar {
+.__footer__bar {
 	margin-left: 1vw;
 	margin-right: 1vw;
 	display: flex;
