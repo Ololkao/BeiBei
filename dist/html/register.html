@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>registration</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="../../dist/css/register_style.css">
+  </head>
+  <body>
+    <div id="__Register__fullscreen">
+      <div id="__Register__form-normal__container">
+        <h2 class="title-normal">註冊</h2><br>
+        <form onclick="" id="form-normal">
+          <label>
+            <input type="email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required><br><br>
+          </label>
+          <label>
+            <input type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required><br><br>
+          </label>
+          <button type="button" onclick="history.back()" id="form-return">回上頁</button><span class="between"></span>
+          <button type="button" onclick="window.location='#__Register__walletMenu__container'" value="" id="form-submit">送出</button><br><br>
+        </form>
+      </div>
+      <div id="__Register__form-quick__container">
+        <h2 class="title-quick">或者你已經有帳戶</h2>
+        <a class="quick_button" href="#"><i class="fab fa-apple"></i></a>
+        <span class="between"></span>
+        <a class="quick_button" href="#"><i class="fab fa-google"></i></a>
+        <span class="between"></span>
+        <a class="quick_button" href="#"><i class="fab fa-line"></i></a>
+      </div>
+    </div>
+    <!-- flex-->
+    <div id="__Register__walletMenu__container">
+      <div id="__walletMenu__bar"><a href="#__Register__joinWallet__container" target="_top"><span class="walletMenu_button">加入錢包</span></a>
+        <span class="between"></span>
+        <a href="#__Register__newWallet__container" target="_top"><span class="walletMenu_button">創建錢包</span></a>
+      </div>
+    </div>
+    <div id="__Register__newWallet__container">
+      <div id="__newWallet__bar">
+        <input class="Wallet_button" type="text" name="Wname" value="" placeholder="創建錢包名稱">
+        <input type="submit" hidden>
+      </div>
+    </div>
+    <div id="__Register__joinWallet__container">
+      <div id="__joinWallet__bar">
+        <input class="Wallet_button" type="text" name="IDcode" vallue="" placeholder="輸入ID CODE">
+        <input type="submit" hidden>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </body>
+</html>

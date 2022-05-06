@@ -1,0 +1,70 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="utf-8")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    title registration
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+    link(rel="stylesheet" href="../../dist/css/register_style.css")
+  body
+    //- script(type="text/javascript" src="")
+    div#__Register__fullscreen
+      //- div#__Register__header__container
+      div#__Register__form-normal__container
+        h2.title-normal 註冊
+        br
+        form(onclick="")#form-normal
+          label
+            input(type="email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required)
+            br
+            br
+          label
+            input(type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required)
+            br
+            br
+          button(type="button" onclick="history.back()")#form-return 回上頁
+          span.between
+          button(type="button" onclick="window.location='#__Register__walletMenu__container'" value="")#form-submit 送出
+          br
+          br
+      div#__Register__form-quick__container
+        h2.title-quick 或者你已經有帳戶
+        |
+        |
+        a(href="#").quick_button
+          i(class="fab fa-apple")
+        |
+        |
+        span.between
+        |
+        |
+        a(href="#").quick_button
+          i(class="fab fa-google")
+        |
+        |
+        span.between
+        |
+        |
+        a(href="#").quick_button
+          i(class="fab fa-line")
+    // flex
+    div#__Register__walletMenu__container
+      div#__walletMenu__bar
+        a(href="#__Register__joinWallet__container" target="_top")
+          span.walletMenu_button 加入錢包
+        |
+        |
+        span.between
+        |
+        |
+        a(href="#__Register__newWallet__container" target="_top")
+          span.walletMenu_button 創建錢包
+    div#__Register__newWallet__container
+      div#__newWallet__bar
+        input(type="text" name="Wname" value="" placeholder="創建錢包名稱").Wallet_button
+        input(type="submit" hidden)
+    div#__Register__joinWallet__container
+      div#__joinWallet__bar
+        input(type="text" name="IDcode" vallue="" placeholder="輸入ID CODE").Wallet_button
+        input(type="submit" hidden)
+    script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js")
