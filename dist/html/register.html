@@ -10,46 +10,64 @@
   <body>
     <div id="__Register__fullscreen">
       <div id="__Register__form-normal__container">
-        <h2 class="title-normal">註冊</h2><br>
-        <form onclick="" id="form-normal">
+        <h3 id="title-normal">註冊</h3><br>
+        <form id="form-normal" action="/" method="post">
           <label>
-            <input type="email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required><br><br>
-          </label>
+            <input class="lively" type="email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required>
+          </label><br><br>
           <label>
-            <input type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required><br><br>
-          </label>
-          <button type="button" onclick="history.back()" id="form-return">回上頁</button><span class="between"></span>
-          <button type="button" onclick="window.location='#__Register__walletMenu__container'" value="" id="form-submit">送出</button><br><br>
+            <input class="lively" type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required>
+          </label><br><br>
+          <button type="reset" onclick="history.back()" id="form-return">重新輸入</button><span class="between"></span>
+          <button type="button" onclick="window.location='#__Register__wallet__container'" id="form-submit">送出資料</button><br><br>
         </form>
       </div>
       <div id="__Register__form-quick__container">
-        <h2 class="title-quick">或者你已經有帳戶</h2>
-        <a class="quick_button" href="#"><i class="fab fa-apple"></i></a>
-        <span class="between"></span>
-        <a class="quick_button" href="#"><i class="fab fa-google"></i></a>
+        <h3 id="title-quick">或者你已經有帳戶</h3>
+        <a class="quick_button" href="#"><i class="fab fa-facebook"></i></a>
         <span class="between"></span>
         <a class="quick_button" href="#"><i class="fab fa-line"></i></a>
-      </div>
-    </div>
-    <!-- flex-->
-    <div id="__Register__walletMenu__container">
-      <div id="__walletMenu__bar"><a href="#__Register__joinWallet__container" target="_top"><span class="walletMenu_button">加入錢包</span></a>
         <span class="between"></span>
-        <a href="#__Register__newWallet__container" target="_top"><span class="walletMenu_button">創建錢包</span></a>
+        <a class="quick_button" href="#"><i class="fab fa-google"></i></a>
       </div>
-    </div>
-    <div id="__Register__newWallet__container">
-      <div id="__newWallet__bar">
-        <input class="Wallet_button" type="text" name="Wname" value="" placeholder="創建錢包名稱">
-        <input type="submit" hidden>
+      <!-- flex-->
+      <div id="__Register__wallet__container">
+        <div id="__walletInfo__bar">
+          <div class="user-icons lively"><i class="fas fa-user"></i></div>
+          <p>darbyishandsome@gmail.com</p>
+        </div>
+        <div id="__walletMenu__bar"><a class="menu-flex lively brand-color" href="#__Register__new-wallet__container" target="_top"><span>
+              <b>創建錢包</b></span></a><a class="menu-flex lively" href="#__Register__join-wallet__container" target="_top"><span>
+              <b>加入錢包</b></span></a></div>
       </div>
-    </div>
-    <div id="__Register__joinWallet__container">
-      <div id="__joinWallet__bar">
-        <input class="Wallet_button" type="text" name="IDcode" vallue="" placeholder="輸入ID CODE">
-        <input type="submit" hidden>
+      <div id="__Register__new-wallet__container">
+        <div id="__newWallet__bar">
+          <form id="new-wallet" action="./register.html" method="post">
+            <input class="enter_button" type="text" name="Wallet" value="" placeholder="創建錢包名稱" required>
+            <input type="submit" onclick="" hidden>
+          </form>
+        </div>
+      </div>
+      <div id="__Register__join-wallet__container">
+        <div id="__joinWallet__bar">
+          <form id="join-wallet" action="./register.html" method="post">
+            <input class="enter_button" type="text" name="IDcode" value="" placeholder="輸入ID CODE" pattern="[a-z0-9]{6}">
+            <input type="submit" onclick="" hidden>
+          </form>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      //- const Wallet = document.getElementsByName('Wallet');
+      //- const input = document.getElementsByClassName("enter_button");
+      //- const new_wallet = input[0];
+      //- Wallet.addEventListener("keypress", function(event) {
+      //-   if (event.key === "Enter") {
+      //-     //- event.preventDefault();
+      //-     document.getElementById("new-wallet").click();
+      //-   }
+      //- });
+    </script>
   </body>
 </html>

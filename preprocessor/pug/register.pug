@@ -11,35 +11,28 @@ html(lang="zh-TW")
     div#__Register__fullscreen
       //- div#__Register__header__container
       div#__Register__form-normal__container
-        h2.title-normal 註冊
+        h3#title-normal 註冊
         br
-        form(onclick="")#form-normal
+        form#form-normal(action="/" method="post")
           label
-            input(type="email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required)
-            br
-            br
+            input(type="email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required).lively
+          br
+          br
           label
-            input(type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required)
-            br
-            br
-          button(type="button" onclick="history.back()")#form-return 回上頁
+            input(type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required).lively
+          br
+          br
+          button(type="reset" onclick="history.back()")#form-return 重新輸入
           span.between
-          button(type="button" onclick="window.location='#__Register__walletMenu__container'" value="")#form-submit 送出
+          button(type="button" onclick="window.location='#__Register__wallet__container'")#form-submit 送出資料
           br
           br
       div#__Register__form-quick__container
-        h2.title-quick 或者你已經有帳戶
+        h3#title-quick 或者你已經有帳戶
         |
         |
         a(href="#").quick_button
-          i(class="fab fa-apple")
-        |
-        |
-        span.between
-        |
-        |
-        a(href="#").quick_button
-          i(class="fab fa-google")
+          i(class="fab fa-facebook")
         |
         |
         span.between
@@ -47,24 +40,47 @@ html(lang="zh-TW")
         |
         a(href="#").quick_button
           i(class="fab fa-line")
-    // flex
-    div#__Register__walletMenu__container
-      div#__walletMenu__bar
-        a(href="#__Register__joinWallet__container" target="_top")
-          span.walletMenu_button 加入錢包
         |
         |
         span.between
         |
         |
-        a(href="#__Register__newWallet__container" target="_top")
-          span.walletMenu_button 創建錢包
-    div#__Register__newWallet__container
-      div#__newWallet__bar
-        input(type="text" name="Wname" value="" placeholder="創建錢包名稱").Wallet_button
-        input(type="submit" hidden)
-    div#__Register__joinWallet__container
-      div#__joinWallet__bar
-        input(type="text" name="IDcode" vallue="" placeholder="輸入ID CODE").Wallet_button
-        input(type="submit" hidden)
+        a(href="#").quick_button
+          i(class="fab fa-google")
+      // flex
+      div#__Register__wallet__container
+        div#__walletInfo__bar
+          div.user-icons.lively
+            i.fas.fa-user
+          p darbyishandsome@gmail.com
+        div#__walletMenu__bar
+          a(href="#__Register__new-wallet__container" target="_top").menu-flex.lively.brand-color
+            span #[#{'b'} 創建錢包]
+          //- |
+          //- |
+          //- span.between
+          //- |
+          //- |
+          a(href="#__Register__join-wallet__container" target="_top").menu-flex.lively
+            span #[#{'b'} 加入錢包]
+      div#__Register__new-wallet__container
+        div#__newWallet__bar
+          form#new-wallet(action="./register.html" method="post")
+            input(type="text" name="Wallet" value="" placeholder="創建錢包名稱" required).enter_button
+            input(type="submit" onclick="" hidden)
+      div#__Register__join-wallet__container
+        div#__joinWallet__bar
+          form#join-wallet(action="./register.html" method="post")
+            input(type="text" name="IDcode" value="" placeholder="輸入ID CODE" pattern="[a-z0-9]{6}").enter_button
+            input(type="submit" onclick="" hidden)
     script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js")
+    script.
+      //- const Wallet = document.getElementsByName('Wallet');
+      //- const input = document.getElementsByClassName("enter_button");
+      //- const new_wallet = input[0];
+      //- Wallet.addEventListener("keypress", function(event) {
+      //-   if (event.key === "Enter") {
+      //-     //- event.preventDefault();
+      //-     document.getElementById("new-wallet").click();
+      //-   }
+      //- });
