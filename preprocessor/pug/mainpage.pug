@@ -1,0 +1,39 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Mainpage
+    link(rel="stylesheet" href="../../dist/css/mainpage_style.css")
+  body
+    // use tab to switch pages
+    div#__Mainpage__fullscreen
+      ul.tab_title
+      div#__Mainpage__overview__container
+        div#__overview__header__bar
+          span#overview_title 我的錢包
+        div#__overview__flexbox__bar
+          a.flex-item(href="#__Mainpage__homepage__container" target="_top") 台南住宿
+          a.flex-item(href="#") 林家
+          .flex-item 
+          .flex-item 
+          .flex-item 
+          .flex-item 
+        div#__overview__footer__bar
+          a(href="#" target="_top").overview-flex
+            span 加入錢包
+          |
+          |
+          span.between
+          |
+          |
+          a(href="#" target="_top").overview-flex
+            span 創建錢包
+      div#__Mainpage__homepage__container
+        div#homepage__header__bar
+          span.homepage_title 錢包圖片
+        div#homepage__notif__bar
+          span Notification
+        div#homepage__footer__bar
+          button(type="button").fab-add.lively +
