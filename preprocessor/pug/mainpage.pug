@@ -16,10 +16,6 @@ html(lang="zh-TW")
         div#__overview__flexbox__bar
           a.flex-item(href="#__Mainpage__homepage__container" target="_top") 台南住宿
           a.flex-item(href="#") 林家
-          .flex-item 
-          .flex-item 
-          .flex-item 
-          .flex-item 
         div#__overview__footer__bar
           a(href="#" target="_top").overview-flex
             span 加入錢包
@@ -36,4 +32,34 @@ html(lang="zh-TW")
         div#homepage__notif__bar
           span Notification
         div#homepage__footer__bar
-          button(type="button").fab-add.lively +
+          //- ul.fab-menu
+          //-   li
+          //-     a.fab-btn.lively
+          //-   li
+          //-     a.fab-btn.lively
+          button(type="button")#fab-add.fab-btn.lively +
+      div#__Mainpage__manualTrack__container
+        div#manualTrack__header__bar
+          a.cancel-icon(href="history.back()" target="_top")
+          span.manualTrack_title 新增支出
+        div#manualTrack__input__bar
+          span 帳目名稱
+          lable $
+            input(inputmode="numeric" pattern="[0-9]*" placeholder="0" type="text" name="expense")
+          hr.break_style
+        div#manualTrack__infos__bar
+          span 備註
+          hr.break_style
+          span 分攤人
+          div#split-bill_flexbox
+            div.user-icons.lively
+              i.fas.fa-user
+        div#manualTrack__keypad__bar
+          hr
+          span#current_date
+          hr
+        div#manualTrack__footer__bar
+          a(href="#__Mainpage__homepage__container" target="_top").menu-flex.lively
+            span 確認記帳
+    script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js")
+    script(type="text/javascript" src="../../dist/js/mainpage.js")

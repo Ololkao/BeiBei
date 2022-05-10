@@ -13,12 +13,7 @@
       <ul class="tab_title"></ul>
       <div id="__Mainpage__overview__container">
         <div id="__overview__header__bar"><span id="overview_title">我的錢包</span></div>
-        <div id="__overview__flexbox__bar"><a class="flex-item" href="#__Mainpage__homepage__container" target="_top">台南住宿</a><a class="flex-item" href="#">林家</a>
-          <div class="flex-item"> </div>
-          <div class="flex-item"> </div>
-          <div class="flex-item"> </div>
-          <div class="flex-item"> </div>
-        </div>
+        <div id="__overview__flexbox__bar"><a class="flex-item" href="#__Mainpage__homepage__container" target="_top">台南住宿</a><a class="flex-item" href="#">林家</a></div>
         <div id="__overview__footer__bar"><a class="overview-flex" href="#" target="_top"><span>加入錢包</span></a>
           <span class="between"></span>
           <a class="overview-flex" href="#" target="_top"><span>創建錢包</span></a>
@@ -28,9 +23,31 @@
         <div id="homepage__header__bar"><span class="homepage_title">錢包圖片</span></div>
         <div id="homepage__notif__bar"><span>Notification</span></div>
         <div id="homepage__footer__bar">
-          <button class="fab-add lively" type="button">+</button>
+          <button class="fab-btn lively" type="button" id="fab-add">+</button>
         </div>
       </div>
+      <div id="__Mainpage__manualTrack__container">
+        <div id="manualTrack__header__bar"><a class="cancel-icon" href="history.back()" target="_top"></a><span class="manualTrack_title">新增支出</span></div>
+        <div id="manualTrack__input__bar"><span>帳目名稱</span>
+          <lable>$
+            <input inputmode="numeric" pattern="[0-9]*" placeholder="0" type="text" name="expense">
+          </lable>
+          <hr class="break_style">
+        </div>
+        <div id="manualTrack__infos__bar"><span>備註</span>
+          <hr class="break_style"><span>分攤人</span>
+          <div id="split-bill_flexbox">
+            <div class="user-icons lively"><i class="fas fa-user"></i></div>
+          </div>
+        </div>
+        <div id="manualTrack__keypad__bar">
+          <hr><span id="current_date"></span>
+          <hr>
+        </div>
+        <div id="manualTrack__footer__bar"><a class="menu-flex lively" href="#__Mainpage__homepage__container" target="_top"><span>確認記帳</span></a></div>
+      </div>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../../dist/js/mainpage.js"></script>
   </body>
 </html>
