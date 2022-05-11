@@ -2,16 +2,18 @@ doctype html
 html(lang="zh-TW")
   head
     meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(content="width=device-width, initial-scale=1" name="viewport")
     title registration
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter")
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
     link(rel="stylesheet" href="../../dist/css/register_style.css")
   body
-    //- script(type="text/javascript" src="")
+    script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js")
     div#__Register__fullscreen
       //- div#__Register__header__container
       div#__Register__form-normal__container
-        h3#title-normal 註冊
+        h3#title-normal 建立新帳號
         br
         form#form-normal(action="/" method="post")
           label
@@ -22,13 +24,11 @@ html(lang="zh-TW")
             input(type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required).lively
           br
           br
-          button(type="reset" onclick="history.back()")#form-return 重新輸入
-          span.between
-          button(type="button" onclick="window.location='#__Register__wallet__container'")#form-submit 送出資料
+          button(type="button" onclick="window.location='#__Register__wallet__container'")#form-submit.lively.brand-color 註冊
           br
           br
       div#__Register__form-quick__container
-        h3#title-quick 或者你已經有帳戶
+        h3#title-quick 已經有帳號
         |
         |
         a(href="#").quick_button
@@ -47,33 +47,43 @@ html(lang="zh-TW")
         |
         a(href="#").quick_button
           i(class="fab fa-google")
+      div#__Register__banner__container.banner-padding
+        img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
       // flex
       div#__Register__wallet__container
         div#__walletInfo__bar
-          div.user-icons.lively
+          div#usericon.user-icons.lively
             i.fas.fa-user
-          p darbyishandsome@gmail.com
+          p#username darbyishandsome@gmail.com
         div#__walletMenu__bar
-          a(href="#__Register__new-wallet__container" target="_top").menu-flex.lively.brand-color
-            span #[#{'b'} 創建錢包]
+          a(href="#__Register__join-wallet__container" target="_top").menu-flex.lively
+            span 加入錢包
           //- |
           //- |
           //- span.between
           //- |
           //- |
-          a(href="#__Register__join-wallet__container" target="_top").menu-flex.lively
-            span #[#{'b'} 加入錢包]
-      div#__Register__new-wallet__container
-        div#__newWallet__bar
-          form#new-wallet(action="./register.html" method="post")
-            input(type="text" name="Wallet" value="" placeholder="創建錢包名稱" required).enter_button
-            input(type="submit" onclick="" hidden)
+          a(href="#__Register__new-wallet__container" target="_top").menu-flex.lively
+            span 新增錢包
+        div#__wallet__banner.banner-padding
+          img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
+      // 
       div#__Register__join-wallet__container
         div#__joinWallet__bar
-          form#join-wallet(action="./register.html" method="post")
+          form#join-wallet(action="./BeiBei.html" method="get")
             input(type="text" name="IDcode" value="" placeholder="輸入ID CODE" pattern="[a-z0-9]{6}").enter_button
             input(type="submit" onclick="" hidden)
-    script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js")
+        div#__joinWallet__banner.banner-padding
+          img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
+      // 
+      div#__Register__new-wallet__container
+        div#__newWallet__bar
+          form#new-wallet(action="./BeiBei.html" method="get")
+            input(type="text" name="Wallet" value="" placeholder="創建錢包名稱" required).enter_button
+            input(type="submit" onclick="" hidden)
+        div#newWallet__banner.banner-padding
+          img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
+    //- script(type="text/javascript" src="")
     script.
       //- const Wallet = document.getElementsByName('Wallet');
       //- const input = document.getElementsByClassName("enter_button");

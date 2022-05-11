@@ -24,13 +24,13 @@ a {
 #__Register__form-normal__container {
     width: 100vw;
     height: 35vh;
-    margin: 25vh auto 5vh;
+    margin: 25vh auto 3.5vh;
 }
 
 #__Register__form-quick__container {
     width: 100vw;
-    height: 15vh;
-    margin: 0 auto 20vh;
+    height: 10vh;
+    margin: 0 auto 14.5vh;
 }
 
 #__Register__wallet__container {
@@ -60,13 +60,23 @@ a {
     background-color: #fff333;
 }
 
+.brand-logo {
+    height: 28.75px;
+    width: 87.26px;
+}
+
+.banner-padding {
+    height: 12.5vh;
+}
+
 #title-normal {
+    font-size: 20px;
     text-align: center;
 }
 
 #form-normal input {
-    font-size: 18px;
-    height: 54px;
+    font-size: 16px;
+    height: 55px;
     width: 280px;
 }
 
@@ -75,22 +85,26 @@ a {
 }
 
 .between {
-    padding: 0 3vw;
+    padding: 0 5.8vw;
 }
 
-/* #form-return, #form-submit {} */
+#form-submit {
+    height: 44px;
+    width: 80px;
+}
 
 #title-quick {
+    font-size: 20px;
     text-align: center;
 }
 
 a.quick_button {
-    font-size: 36px;
+    font-size: 30px;
 }
 
 a.quick_button i::before{
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     font-weight: 400;
 }
 
@@ -159,21 +173,21 @@ a.quick_button i::before{
 .menu-flex {
     display: flex;
     font-size: large;
-    height: 8.5vh;
+    height: 6.5vh;
     width: 30vw;
     align-items: center;
     justify-content: center;
-    margin-top: 6vh;
+    margin-top: 4vh;
 }
 
 #__newWallet__bar {
-    height: 100vh;
+    height: 87.5vh;
     line-height: 100vh;
     text-align: center;
 }
 
 #__joinWallet__bar {
-    height: 100vh;
+    height: 87.5vh;
     line-height: 100vh;
     text-align: center;
 }
