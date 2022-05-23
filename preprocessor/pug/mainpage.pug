@@ -40,26 +40,62 @@ html(lang="zh-TW")
           button(type="button")#fab-add.fab-btn.lively +
       div#__Mainpage__manualTrack__container
         div#manualTrack__header__bar
-          a.cancel-icon(href="history.back()" target="_top")
+          img.cancel-icon(src="./icon/next.png" alt="cancel" onclick="")
           span.manualTrack_title 新增支出
-        div#manualTrack__input__bar
-          span 帳目名稱
-          lable $
-            input(inputmode="numeric" pattern="[0-9]*" placeholder="0" type="text" name="expense")
-          hr.break_style
-        div#manualTrack__infos__bar
-          span 備註
-          hr.break_style
-          span 分攤人
-          div#split-bill_flexbox
-            div.user-icons.lively
-              i.fas.fa-user
-        div#manualTrack__keypad__bar
-          hr
+        div#manualTrack__form__bar
+          form#spending-tracker
+            div#basis_infos
+              input.account_name(type="text" name="account_name" id="account_name" placeholder="帳目名稱")
+              label(for="account_name")
+                img(src="./icon/next.png" alt="cancel" onclick="")
+              //- label $
+              input.account_cost(inputmode="numeric" pattern="[0-9]*" placeholder="$ 0" type="text" name="account_cost")
+              hr.break_style1
+            div#other_infos
+              label 備註
+                input.comment(type="text" name="comment")
+              hr.break_style2
+              p.splitter 分攤人
+              ul#checkbox
+                li
+                  input(type="checkbox" id="user1")
+                  label(for="user1")
+                    img(src="./icon/next.png")
+                li
+                  input(type="checkbox" id="user2")
+                  label(for="user2")
+                    img(src="./icon/next.png")
+                li
+                  input(type="checkbox" id="user3")
+                  label(for="user3")
+                    img(src="./icon/next.png")
+                li
+                  input(type="checkbox" id="user4")
+                  label(for="user4")
+                    img(src="./icon/next.png")
+            button.menu-flex.lively(type="button" onclick="window.location='#__Mainpage__homepage__container'" id="spending-confirm") 確認記帳
+        div#manualTrack__timer__bar
           span#current_date
-          hr
-        div#manualTrack__footer__bar
-          a(href="#__Mainpage__homepage__container" target="_top").menu-flex.lively
-            span 確認記帳
+        div#manualTrack__keypad__bar
+          img.keypad(src="./icon/next.png")
+        //- div#manualTrack__input__bar
+        //-   span 帳目名稱
+        //-   label $
+        //-     input(inputmode="numeric" pattern="[0-9]*" placeholder="0" type="text" name="expense")
+        //-   hr.break_style
+        //- div#manualTrack__infos__bar
+        //-   span 備註
+        //-   hr.break_style
+        //-   span 分攤人
+        //-   div#split-bill_flexbox
+        //-     div.user-icons.lively
+        //-       i.fas.fa-user
+        //- div#manualTrack__keypad__bar
+        //-   hr
+        //-   span#current_date
+        //-   hr
+        //- div#manualTrack__footer__bar
+        //-   a(href="#__Mainpage__homepage__container" target="_top").menu-flex.lively
+        //-     span 確認記帳
     script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js")
     script(type="text/javascript" src="../../dist/js/mainpage.js")

@@ -63,15 +63,17 @@ a {
 }
 
 #__Mainpage__manualTrack__container {
-    border: 3px solid #000000;
-    border-radius: 15px 15px 0px 0px;
     margin-top: 6.5vh;
     height: 93.5vh
 }
 
 #manualTrack__header__bar {
+    border: 3px solid #000000;
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 0;
     background-color: #fff333;
-    height: 6.5vh;
+    padding-top: 2.25vh;
+    height: 2.75vh;
 }
 
 /* Detail of all elements */
@@ -170,4 +172,157 @@ a {
     align-items: center;
     justify-content: center;
     margin-top: 6vh;
+}
+
+/* New Style */
+
+label {
+    font-size: 20px;
+}
+
+.break_style1 {
+    border: 0;
+    border-top: 1px double #494949;
+    margin: 0 auto;
+    width: 86vw;
+}
+
+.break_style2 {
+    border: 0;
+    border-top: 1px double #494949;
+    margin: 2vh auto;
+    width: 86vw;
+}
+
+.cancel-icon {
+    display: flex;
+    /* padding-top: 3vh; */
+    padding-left: 3vw;
+    position: fixed;
+}
+
+/* .__Page__menualter {
+    height: 5vw;
+    width: 5vw;
+    margin-top: calc(15vh);
+    padding-left: 2vw;
+} */
+
+/* .manualTrack_title {
+    font-size: 16px;
+} */
+
+#manualTrack__form__bar {
+    height: 38vh;
+}
+
+#basis_infos {
+    background-color: #fff333;
+    border: 3px solid #000000;
+    border-top: 0;
+    display: inline-block;
+    height: 8vh;
+    padding-top: 2vh;
+    width: 98.4vw;
+}
+
+.account_name {
+    background-color: #fff333;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    padding-left: 0;
+    height: 4.5vh;
+    width: 21vw;
+}
+
+.account_name::placeholder {
+    font-size: 20px;
+}
+
+.account_cost {
+    background-color: #fff333;
+    border: none;
+    font-size: 32px;
+    outline: none;
+    padding-left: 0;
+    text-align: right;
+    height: 4.5vh;
+    width: 55vw;
+}
+
+.account_cost::placeholder {
+    font-size: 32px;
+}
+
+#other_infos {
+    border: 3px solid #000000;
+    border-top: 0;
+    display: block;
+    padding: 3vh 7vw 0;
+    text-align: left;
+    width: 84.4vw;
+}
+
+.comment {
+    border: none;
+    outline: none;
+    width: 70vw;
+}
+
+.splitter {
+    font-size: 20px;
+    text-align: left;
+}
+
+#checkbox {
+    list-style: none;
+    padding-left: 0;
+}
+
+#checkbox li {
+    display: inline-block;
+    text-align: center;
+}
+
+input[type="checkbox"][id^="user"] {
+    display: none;
+}
+
+#checkbox label {
+    display: block;
+    margin: 0 auto;
+}
+
+#checkbox label img {
+    border: 2px solid #494949;
+    border-radius: 50%;
+    margin: 0.5vh 1.5vw 1.5vh 0;
+    height: 61px;
+    width: 61px;
+    transition-duration: 0.2s;
+    transform-origin: 0;
+}
+
+#checkbox :checked+label img {
+    border: 5px solid #fff333;
+    border-radius: 50%;
+    transform: scale(0.92);
+    /* z-index: -1; */
+}
+
+#spending-confirm {
+    transform: translate(30vw, 32.5vh);
+}
+
+#manualTrack__timer__bar {
+    background-color: #E5E5E5;
+    border: 3px solid #000000;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+.keypad {
+    height: 33vh;
+    width: 386px;
 }

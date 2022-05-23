@@ -27,24 +27,45 @@
         </div>
       </div>
       <div id="__Mainpage__manualTrack__container">
-        <div id="manualTrack__header__bar"><a class="cancel-icon" href="history.back()" target="_top"></a><span class="manualTrack_title">新增支出</span></div>
-        <div id="manualTrack__input__bar"><span>帳目名稱</span>
-          <lable>$
-            <input inputmode="numeric" pattern="[0-9]*" placeholder="0" type="text" name="expense">
-          </lable>
-          <hr class="break_style">
+        <div id="manualTrack__header__bar"><img class="cancel-icon" src="./icon/next.png" alt="cancel" onclick=""><span class="manualTrack_title">新增支出</span></div>
+        <div id="manualTrack__form__bar">
+          <form id="spending-tracker">
+            <div id="basis_infos">
+              <input class="account_name" type="text" name="account_name" id="account_name" placeholder="帳目名稱">
+              <label for="account_name"><img src="./icon/next.png" alt="cancel" onclick=""></label>
+              <input class="account_cost" inputmode="numeric" pattern="[0-9]*" placeholder="$ 0" type="text" name="account_cost">
+              <hr class="break_style1">
+            </div>
+            <div id="other_infos">
+              <label>備註
+                <input class="comment" type="text" name="comment">
+              </label>
+              <hr class="break_style2">
+              <p class="splitter">分攤人</p>
+              <ul id="checkbox">
+                <li>
+                  <input type="checkbox" id="user1">
+                  <label for="user1"><img src="./icon/next.png"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="user2">
+                  <label for="user2"><img src="./icon/next.png"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="user3">
+                  <label for="user3"><img src="./icon/next.png"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="user4">
+                  <label for="user4"><img src="./icon/next.png"></label>
+                </li>
+              </ul>
+            </div>
+            <button class="menu-flex lively" type="button" onclick="window.location='#__Mainpage__homepage__container'" id="spending-confirm">確認記帳</button>
+          </form>
         </div>
-        <div id="manualTrack__infos__bar"><span>備註</span>
-          <hr class="break_style"><span>分攤人</span>
-          <div id="split-bill_flexbox">
-            <div class="user-icons lively"><i class="fas fa-user"></i></div>
-          </div>
-        </div>
-        <div id="manualTrack__keypad__bar">
-          <hr><span id="current_date"></span>
-          <hr>
-        </div>
-        <div id="manualTrack__footer__bar"><a class="menu-flex lively" href="#__Mainpage__homepage__container" target="_top"><span>確認記帳</span></a></div>
+        <div id="manualTrack__timer__bar"><span id="current_date"></span></div>
+        <div id="manualTrack__keypad__bar"><img class="keypad" src="./icon/next.png"></div>
       </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
