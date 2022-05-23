@@ -1,0 +1,96 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    title registration
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css")
+    link(rel="stylesheet" href="../../dist/css/register_style.css")
+  body
+    script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js")
+    div#__Register__fullscreen
+      //- div#__Register__header__container
+      div#__Register__form-normal__container
+        h3#title-normal 建立新帳號
+        br
+        form#form-normal(action="/" method="post")
+          label
+            input(type="email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required).lively
+          br
+          br
+          label
+            input(type="password" name="pwd" value="" placeholder="Password" pattern="[A-Za-z0-9]{8,}" required).lively
+          br
+          br
+          button(type="button" onclick="window.location='#__Register__wallet__container'")#form-submit.lively.brand-color 註冊
+          br
+          br
+      div#__Register__form-quick__container
+        h3#title-quick 已經有帳號
+        |
+        |
+        a(href="#").quick_button
+          i(class="fab fa-facebook")
+        |
+        |
+        span.between
+        |
+        |
+        a(href="#").quick_button
+          i(class="fab fa-line")
+        |
+        |
+        span.between
+        |
+        |
+        a(href="#").quick_button
+          i(class="fab fa-google")
+      div#__Register__banner__container.banner-padding
+        img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
+      // flex
+      div#__Register__wallet__container
+        div#__walletInfo__bar
+          div#usericon.user-icons.lively
+            i.fas.fa-user
+          p#username darbyishandsome@gmail.com
+        div#__walletMenu__bar
+          a(href="#__Register__join-wallet__container" target="_top").menu-flex.lively
+            span 加入錢包
+          //- |
+          //- |
+          //- span.between
+          //- |
+          //- |
+          a(href="#__Register__new-wallet__container" target="_top").menu-flex.lively
+            span 新增錢包
+        div#__wallet__banner.banner-padding
+          img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
+      // 
+      div#__Register__join-wallet__container
+        div#__joinWallet__bar
+          form#join-wallet(action="./BeiBei.html" method="get")
+            input(type="text" name="IDcode" value="" placeholder="輸入ID CODE" pattern="[a-z0-9]{6}").enter_button
+            input(type="submit" onclick="" hidden)
+        div#__joinWallet__banner.banner-padding
+          img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
+      // 
+      div#__Register__new-wallet__container
+        div#__newWallet__bar
+          form#new-wallet(action="./BeiBei.html" method="get")
+            input(type="text" name="Wallet" value="" placeholder="創建錢包名稱" required).enter_button
+            input(type="submit" onclick="" hidden)
+        div#newWallet__banner.banner-padding
+          img.brand-logo(src="../../team_asset/split_smalllogo.png" alt="brand logo")
+    //- script(type="text/javascript" src="")
+    script.
+      //- const Wallet = document.getElementsByName('Wallet');
+      //- const input = document.getElementsByClassName("enter_button");
+      //- const new_wallet = input[0];
+      //- Wallet.addEventListener("keypress", function(event) {
+      //-   if (event.key === "Enter") {
+      //-     //- event.preventDefault();
+      //-     document.getElementById("new-wallet").click();
+      //-   }
+      //- });
